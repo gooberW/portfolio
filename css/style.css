@@ -17,6 +17,28 @@
     font-style: normal;
 }
 
+@keyframes slide-in {
+    from {
+        transform: translateX(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -71,6 +93,7 @@ body p {
     color: var(--dark-color);
     font-family: var(--title-font);
     transition: all .2s ease-in-out;
+    animation: slide-in 1.5s cubic-bezier(.23,1.19,.9,.98);
 }
 
 .name:hover {
@@ -131,6 +154,12 @@ i {
     width: 100%;
     height: 100%;
     margin-bottom: var(--padding);
+    animation-name: slide-up;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(.23,1.19,.9,.98);
+    animation-fill-mode: forwards;
+    opacity: 0;
+
 }
 
 .projects .col,
@@ -146,6 +175,7 @@ i {
     background-repeat: no-repeat;
     flex-direction: column;
     justify-content: flex-start;
+    
 }
 
 .projects .col {
