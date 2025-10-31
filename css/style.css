@@ -252,6 +252,37 @@ footer a:hover {
 .footer .year {
     justify-content: space-between;
     display: flex;
-    width: 100%; /* ensures it uses full width of parent row */
-    padding: 0;  /* optional: remove extra padding from Bootstrap .col */
+    width: 100%; 
+    padding: 0;
 }
+
+@media (max-width: 1220px) {
+    #projects p {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 960px) {
+    .projects .col-2, .projects .col {
+        width: 33% !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .projects .col-2 {
+        visibility: hidden;
+        width: 0 !important;
+    }
+
+    .projects .col {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 552px) {
+    #projects p, .footer .nav-links li a, .footer p, .navbar .nav-links li a {
+        font-size: 10px !important;
+    }
+    
+}
+
