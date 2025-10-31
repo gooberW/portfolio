@@ -73,7 +73,7 @@ body p {
     padding: 0;
 } 
 
-#navbar {
+#home {
     display: flex;
     font-family: var(--title-font);
     flex-direction: column;
@@ -125,7 +125,18 @@ i {
 }
 
 .navbar .nav-links li a:hover {
-    color: var(--accent-color)
+    color: var(--accent-color);
+}
+
+.disabled {
+    color: var(--dark-color);
+    opacity: 0.5;
+    cursor: default;
+}
+
+.disabled:hover {
+    opacity: 0.5;
+    cursor: default;
 }
 
 #projects {
