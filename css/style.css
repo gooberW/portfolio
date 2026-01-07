@@ -39,14 +39,34 @@
     }
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: var(--main-color);
+    border: 1.5px solid var(--dark-color);
+    border-top: none;
+    border-bottom: none;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 :root {
-    --main-color: #dcedf9;
+    --main-color: #fff6e9;
     --dark-color: #18191c;
-    --accent-color: #fc000d;
+    --accent-color: #f54e0c;
     --padding: 20px;
     --text-font: 'Disket';
     --title-font: 'Ductile';
@@ -57,6 +77,8 @@ body {
     background-color: var(--main-color);
     margin: 0;
     font-family: var(--text-font);
+    padding-top: 70px;
+    
 }
 
 ::selection {
@@ -77,33 +99,42 @@ body p {
     display: flex;
     font-family: var(--title-font);
     flex-direction: column;
-    padding: 0 var(--padding);
-    border-bottom: var(--dark-color) 1px solid;
+    padding: 0;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
+    padding: 10px;
+    height: 70px;
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--main-color);
+    border-bottom: var(--dark-color) 1.5px solid;
+    top: 0;
 }
 
 .name {
-    font-size: 50px;
+    font-size: 20px;
     color: var(--dark-color);
     font-family: var(--title-font);
-    transition: all .2s ease-in-out;
-    animation: slide-in 1.5s cubic-bezier(.23,1.19,.9,.98);
+    transition: all .1s ease-in-out;
+    animation: slide-in 1s cubic-bezier(.23,1.19,.9,.98);
+    border: 1.5px solid transparent !important;
+    height: 44px !important;
 }
 
 .name:hover {
-    color: var(--accent-color);
+    border-color: var(--dark-color) !important;
 }
 
 .navbar a{
     text-decoration: none;;
     padding: 0;
     margin: 0;
+    height: fit-content;
 }
 
 .navbar .nav-links {
@@ -111,21 +142,57 @@ body p {
     text-decoration: none;
     list-style: none;
     display: flex;
-    gap: var(--padding);
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1 !important;
+    height: 50px !important;
 }
 
 i {
-    margin-left: 5px;
+    margin: 0;
 }
 
 .navbar .nav-links li a {
-    font-size: 14px;
+    font-size: 22px;
     color: var(--dark-color);
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1.5px solid transparent;
 }
 
-.navbar .nav-links li a:hover {
-    color: var(--accent-color);
+.navbar .nav-links li a:hover, .navbar .nav-links li a:focus {
+    border-color: var(--dark-color);
+    box-shadow: #18191c 2px 2px 0px 0px;
+
+}
+
+.navbar .nav-links li a:active {
+    background-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.date-time {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--dark-color);
+    font-family: var(--text-font);
+    animation: slide-in 1s cubic-bezier(.23,1.19,.9,.98);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px;
 }
 
 .disabled {
@@ -177,25 +244,53 @@ i {
 .projects .col-2 {
     height: 50vh;
     display: flex;
-    outline: 1px solid var(--dark-color);
-    outline-offset: -1px;
-    border: none;
+    border: 1.5px solid var(--dark-color);
     padding: var(--padding);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     flex-direction: column;
     justify-content: flex-start;
+    border-right: none;
     
+}
+
+.projects .col-2:last-child, .projects .col:last-child {
+    border-right: var(--dark-color) 1.5px solid;
+}
+
+.button {
+    padding: 10px;
+    font-size: 12px;
+    border: 1.5px solid var(--dark-color);
+    width: fit-content;
+    transition: all .1s ease-in-out;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: var(--dark-color) 2px 2px 0px 0px;
+    background-color: var(--main-color);
+}
+
+.button:active {
+    box-shadow: none;
+    background-color: var(--main-color);
 }
 
 .projects .col {
-    width: 25%;
+    width: 30%;
     
 }
 
+.projects .col.text {
+    overflow-y: scroll;
+}
+
 .projects .col-2 {
-    width: 50%;
+    width: 40%;
     background-color: var(--accent-color);
 }
 

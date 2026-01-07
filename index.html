@@ -13,14 +13,21 @@
 <body>
     <header id="home">
         <div class="navbar">
-            <a href="#home" class="name">GRT</a>
+            
 
             <ul class="nav-links">
-                <li><a class="disabled">CONTACT</a></li>
-                <li><a class="disabled">RESUME</a></li>
-                <li><a href="https://github.com/gooberW">GITHUB</a></li>
-                <li><a href="https://www.linkedin.com/in/gabriel-teixeira-030503359/">LINKEDIN</a></li>
+                <li><a href="#home" title="Gabriel Rei Teixeira" class="name">G
+                </a></li>
+                <li><a href="https://github.com/gooberW" title="Github"><i class="bi bi-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin"><i class="bi bi-linkedin"></i></a></li>
+                <li><a class="disabled" title="Contacts"><i class="bi bi-telephone-fill"></i></a></li>
+                <li><a class="disabled" title="Resume"><i class="bi bi-file-earmark-person"></i></a></li>
             </ul>
+
+            <div class="date-time">
+                <p class="time"></p>
+                <p class="date"></p>
+            </div>
 
         </div>
         
@@ -32,7 +39,7 @@
             <div class="row">
                 <div class="col-2" style="background-image: url(img/nsb_banner.png);">
                 </div>
-                <div class="col" >
+                <div class="col text" >
                     <p class="title">Nature Strikes Back</p>
                     <p> Originally developed during a Game Jam, <strong>Nature Strikes Back</strong> was later 
                         expanded into a full game to be presented at <strong>Lisbon Games Week 2025</strong>, featuring a mix of lighthearted humor and a classic B-movie aesthetic. </p> 
@@ -43,8 +50,9 @@
                     
                 </div>
                 <div class="col" style="background-color: var(--accent-color);">
-                    <p class="title">Team Project</p>
+                    <p class="title">Team Project [size: 6]</p>
                     <p>Lead Artist, Programmer</p>
+                    <a href="#" class="button">Game Page</a>
                     <p class="details">Made in Unity</p>
                 </div>
             </div>
@@ -52,9 +60,10 @@
                 <div class="col" style="background-color: var(--accent-color);">
                     <p class="title">Solo Project</p>
                     <p>Programmer, Artist, Sound Designer, Game Designer</p>
+                    <a href="#" class="button">Game Page</a>
                     <p class="details">Made in Unity</p>
                 </div>
-                <div class="col">
+                <div class="col text">
                     <p class="title">Wendwood</p>
                     <p>Wendwood is a first-person horror game developed as part of a university project.</p>
 
@@ -111,4 +120,24 @@
     </footer>
     
 </body>
+
+<script>
+    const dateElement = document.querySelector('.date');
+    const timeElement = document.querySelector('.time');
+
+    function updateDateTime() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        dateElement.textContent = `${day}/${month}/${year}`;
+        timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
 </html>
