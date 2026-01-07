@@ -179,13 +179,8 @@ i {
     justify-content: center;
     align-items: center;
     display: flex;
-    border: 1.5px solid transparent;
-}
-
-.navbar .nav-links li a:hover, .navbar .nav-links li a:focus {
-    border-color: var(--border-color);
+    border: 1.5px solid var(--border-color);
     box-shadow: var(--dark-color) 2px 2px 0px 0px;
-
 }
 
 .navbar .nav-links li a:active {
