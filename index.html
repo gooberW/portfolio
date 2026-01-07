@@ -11,18 +11,20 @@
 
 </head>
 <body>
-    <header id="home">
+    <header>
         <div class="navbar">
-            
-
             <ul class="nav-links">
-                <li><a href="#home" title="Gabriel Rei Teixeira" class="name">G
+                <li><a href="#projects" title="My Portfolio" class="name">G
                 </a></li>
                 <li><a href="https://github.com/gooberW" title="Github"><i class="bi bi-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin"><i class="bi bi-linkedin"></i></a></li>
-                <li><a class="disabled" title="Contacts"><i class="bi bi-telephone-fill"></i></a></li>
+                <li><a class="disabled" title="Contacts"><i class="bi bi-telephone"></i></a></li>
                 <li><a class="disabled" title="Resume"><i class="bi bi-file-earmark-person"></i></a></li>
             </ul>
+
+            <div class="mode">
+                <i class="bi bi-moon" id="time-of-day" title="It's dark outside..."></i>
+            </div>
 
             <div class="date-time">
                 <p class="time"></p>
@@ -42,7 +44,8 @@
                 <div class="col text" >
                     <p class="title">Nature Strikes Back</p>
                     <p> Originally developed during a Game Jam, <strong>Nature Strikes Back</strong> was later 
-                        expanded into a full game to be presented at <strong>Lisbon Games Week 2025</strong>, featuring a mix of lighthearted humor and a classic B-movie aesthetic. </p> 
+                        expanded into a full game to be presented at <strong>Lisboa Games Week 2025</strong>, featuring a mix of lighthearted humor 
+                        and a classic B-movie aesthetic. </p> 
                         <p> Players take on the role of "MAN", defending a city overrun by plant-monster 
                             hybrids born from nature's revenge. </p> <p> After years of human impact on the environment, 
                             nature finally decides to fight back. </p>
@@ -63,7 +66,7 @@
                     <a href="https://gabrielrtx.itch.io/wendwood" class="button">Game Page</a>
                     <p class="details">Made in Unity</p>
                 </div>
-                <div class="col text">
+                <div class="col text" style="border-right: 1.5px solid var(--border-color);">
                     <p class="title">Wendwood</p>
                     <p>Wendwood is a first-person horror game developed as part of a university project.</p>
 
@@ -76,7 +79,7 @@
                         
                 </div>
                 <div class="col-2" style="background-image: url(img/wendwood.png);">
-                    ???
+                    
                 </div>
             </div>
             <div class="row">
@@ -95,13 +98,6 @@
         
     </section>
 
-    <section id="contact-me">
-        <div>
-            <p>Contact Me</p>
-            <div class="search-bar">
-                <a href="mailto:gabrielrtx@gmail.com">Email</a>
-            </div>
-        </div>
 
     <footer id="footer" class="footer">
         <div class="row">
@@ -117,6 +113,7 @@
 <script>
     const dateElement = document.querySelector('.date');
     const timeElement = document.querySelector('.time');
+    const timeOfDayIcon = document.getElementById('time-of-day');
 
     function updateDateTime() {
         const now = new Date();
@@ -128,6 +125,14 @@
         const seconds = String(now.getSeconds()).padStart(2, '0');
         dateElement.textContent = `${day}/${month}/${year}`;
         timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+
+        if (now.getHours() >= 6 && now.getHours() < 18) {
+            timeOfDayIcon.className = 'bi bi-sun';
+            timeOfDayIcon.title = "It's bright outside!";
+        } else {
+            timeOfDayIcon.className = 'bi bi-moon';
+            timeOfDayIcon.title = "It's dark outside...";
+        }
     }
 
     setInterval(updateDateTime, 1000);

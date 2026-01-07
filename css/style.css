@@ -46,17 +46,25 @@
   
 ::-webkit-scrollbar-track {
     background-color: var(--dark-color);
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--border-color);
     border-top: none;
     border-bottom: none;
 }
   
 ::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--border-color);
     border-top: none;
     border-bottom: none;
 }
+
+.mode {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 
 * {
     box-sizing: border-box;
@@ -64,13 +72,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 :root {
     --main-color: #fffdfa;
     --dark-color: #18191c;
     --accent-color: #f54e0c;
-    --padding: 20px;
+    --text-color: #18191c;
+    --border-color: #18191c;
+    --padding: 10px;
     --text-font: 'Disket';
     --title-font: 'Ductile';
 }
@@ -81,7 +92,7 @@ body {
     margin: 0;
     font-family: var(--text-font);
     padding-top: 70px;
-    
+    color: var(--text-color);
 }
 
 ::selection {
@@ -115,7 +126,7 @@ body p {
     position: fixed;
     z-index: 1000;
     background-color: var(--main-color);
-    border-bottom: var(--dark-color) 1.5px solid;
+    border-bottom: var(--border-color) 1.5px solid;
     top: 0;
 }
 
@@ -125,7 +136,7 @@ body p {
     font-family: var(--title-font);
     transition: all .1s ease-in-out;
     animation: slide-in 1s cubic-bezier(.23,1.19,.9,.98);
-    border: 1.5px solid var(--dark-color) !important;
+    border: 1.5px solid var(--border-color) !important;
     height: 44px !important;
     box-shadow: var(--dark-color) 2px 2px 0px 0px;
 }
@@ -172,8 +183,8 @@ i {
 }
 
 .navbar .nav-links li a:hover, .navbar .nav-links li a:focus {
-    border-color: var(--dark-color);
-    box-shadow: #18191c 2px 2px 0px 0px;
+    border-color: var(--border-color);
+    box-shadow: var(--dark-color) 2px 2px 0px 0px;
 
 }
 
@@ -183,7 +194,7 @@ i {
 }
 
 .date-time {
-    margin-left: auto;
+    margin-left: 10px;
     font-size: 12px;
     color: var(--dark-color);
     font-family: var(--text-font);
@@ -245,7 +256,7 @@ i {
 .projects .col-2 {
     height: 50vh;
     display: flex;
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--border-color);
     padding: var(--padding);
     background-size: cover;
     background-position: center;
@@ -257,13 +268,13 @@ i {
 }
 
 .projects .col-2:last-child, .projects .col:last-child {
-    border-right: var(--dark-color) 1.5px solid;
+    border-right: var(--border-color) 1.5px solid;
 }
 
 .button {
     padding: 10px;
     font-size: 12px;
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--border-color);
     width: fit-content;
     transition: all .1s ease-in-out;
     color: var(--dark-color);
@@ -287,7 +298,7 @@ i {
 }
 
 .projects .col.text {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .projects .col-2 {
