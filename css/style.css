@@ -183,6 +183,10 @@ i {
     box-shadow: var(--dark-color) 2px 2px 0px 0px;
 }
 
+.navbar .nav-links li a:hover {
+    transform: translateY(-2px);
+}
+
 .navbar .nav-links li a:active {
     background-color: var(--accent-color);
     box-shadow: none;
