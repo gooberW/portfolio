@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Ductile';
+    src: url(../fonts/DuctileDisplay.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Disket';
+    src: url(../fonts/Disket-Mono-Regular.ttf) format('truetype');
+    font-weight: normal; /* normal */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Disket';
+    src: url(../fonts/Disket-Mono-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: var(--dark-color);
+    border: 1.5px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border: 1.5px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
+}
+
+.mode {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--dark-color);
+}
+
+:root {
+    --main-color: #fffdfa;
+    --dark-color: #18191c;
+    --accent-color: #f54e0c;
+    --text-color: #18191c;
+    --border-color: #18191c;
+    --padding: 10px;
+    --text-font: 'Disket';
+    --title-font: 'Ductile';
+    --page-width: 210mm;
+    --page-height: 297mm;
+}
+
+body {
+    width: var(--page-width);
+    height: var(--page-height);
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    margin: 0;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: var(--text-font);
+    color: var(--text-color);
+    border: 1.5px solid var(--border-color);
+    font-size: 12px;
+    padding: 20mm;
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
+
+h3 {
+    font-family: var(--title-font);
+}
+
+body p {
+    margin: 0;
+    padding: 0;
+}
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1.5px solid var(--border-color);
+    width: 100%;
+    padding: var(--padding);
+}
+
+.cv-header h1, .cv-header p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.cv-body {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: var(--padding);
+}
+
+.contacts, .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+
+.links a {
+    color: var(--accent-color);
+}
+
+
+.cv-body section {
+    border: 1.5px solid var(--border-color);
+}
+
+.row{
+    border-bottom: 1.5px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row.title {
+    background-color: var(--accent-color);
+    padding: var(--padding);
+    color: var(--main-color);
+}
+
+.col {
+    display: flex;
+    gap: 5px;
+    border-right: 1.5px solid var(--border-color);
+    padding: var(--padding);
+    flex-direction: column;
+    flex: auto;
+}
+
+.col:last-child {
+    border-right: none;
+}
+
+.work-experience .IGS{
+    margin-top: var(--padding);
+    border-top: 1.5px solid var(--border-color);
+}
+
+.IGS .row.title {
+    padding:0;
+}
+
+.col.bullet {
+    flex: 0 0 20px;
+    background-color: var(--accent-color);
+}
+
+.skills .col {
+    flex: 0 0 40%;
+    justify-content: center;
+}
+
+.cv-footer {
+    margin-top: auto;
+    border-top: 1.5px solid var(--border-color);
+    width: 100%;
+    padding: var(--padding);
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+@media print {
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .cv-body-container {
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 20mm !important;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    @page {
+        margin: 0;
+    }
+}
