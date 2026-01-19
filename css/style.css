@@ -497,3 +497,9 @@ footer a:hover {
     
 }
 
+@media (max-height: 500px) {
+    .projects .col, .projects .col-2 {
+        height: 75vh !important;
+    }
+}
+
