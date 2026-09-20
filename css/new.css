@@ -168,6 +168,26 @@ p {
     display: flex;
 }
 
+.video {
+    height: 100%;
+    overflow: hidden;
+    min-height: 20em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+.project-details .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
+    width: 50%;
+    margin-bottom: 2em;
+}
+
 .row .tags {
     gap: 0.5em;
     background-color: transparent;
@@ -329,6 +349,10 @@ p {
     justify-content: end;
 }
 
+.navbar.sb {
+    justify-content: space-between;
+}
+
 
 .navbar a{
     text-decoration: none;;
@@ -346,7 +370,7 @@ p {
     padding: 0;
 }
 
-.nav-links li{
+.nav-links li, .home-btn {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -367,6 +391,12 @@ i{
     color: var(--primary-color);
     cursor: pointer;
     border: none;
+    padding: 0.5em 1.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    width: fit-content;
 }
 
 .button.sec {
@@ -404,6 +434,10 @@ button {
 
 .nav-links li:hover i {
     transform: rotate(-45deg);
+}
+
+.home-btn:hover i {
+    transform: translateX(-3px);
 }
 
 button:hover i {
