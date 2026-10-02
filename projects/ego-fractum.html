@@ -34,53 +34,54 @@
         </div>
         <div class="content">
             <div class="row mb-1 ">
-                <div class="column gap-1">
+                <div class="column gap-1 mb-1">
                     <div class="logo">
                         <img src="../img/egofr_logo.png" alt="EgoFractum Logo"></img>
                     </div>
-                    <p>
-                        [...]
+                    <p class="w-50"> 
+                        EgoFractum is a VR game developed as a final project for my bachelor's degree in Informatics and Multimedia Engineering 
+                        at ISEL. The game is a puzzle-based atmospheric experience that explores different ways of interacting with a virtual environment, 
+                        using the player's body and mind to solve challenges and progress through the game. The project was developed in Unity and C#, 
+                        with a focus on creating an immersive and engaging experience for players.
                     </p>
-                    <a href="https://github.com/gooberW/IGSLauncher" class="pill center w-fit" target="_blank">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                        <p>...</p>
-                    </a>
                 </div>
             </div>
-
-            <div class="carousel gap-1 row mb-1">
+            <div class="carousel gap-1 row mb-2">
                 <div class="carousel-item">
-                    <img src="../img/ego-fractum_banner.png" alt="EgoFractum Banner"></img>
+                    <img src="../img/egofr_interacao.jpeg" alt="EgoFractum Banner"></img>
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/ego-fractum_screenshot.png" alt="EgoFractum Screenshot"></img>
+                    <img src="../img/egofr_exploracao.png" alt="EgoFractum Screenshot"></img>
                 </div>
                 <div class="carousel-item">
-                    <video src="../img/egofr_teaser.mp4" alt="EgoFractum Demo Video" autoplay loop muted></video>
+                    <video
+                        src="../img/egofr_teaser.mp4"
+                        alt="EgoFractum Demo Video"
+                        autoplay
+                        loop
+                        muted
+                    ></video>
                 </div>
             </div>
-
             <div class="row w-100 align-start gap-2 mb-2">
-                <div class="column gap-05">
-                    <h1 class="x-large bold">About</h1>
+                <div class="column gap-05 w-50">
+                    <h1 class="x-large bold">Systems</h1>
                     <p>
-                        When ISEL Game Studios needed a launcher to showcase its games at public events, 
-                    the goal was to create a simple and intuitive platform that would allow visitors 
-                    to easily browse and play our games. I focused on making the launcher as user-friendly 
-                    as possible, ensuring that even non-technical users could navigate it effortlessly.
-                    </p>
-                    <p>
-                        Developing the launcher in-house also gave us the flexibility to tailor it to ISEL Game Studios' 
-                        brand identity, creating a more cohesive, polished, and professional experience.
-                    </p>
+                        To persist the player's progress, I implemented a save system that tracks and stores the player's position, as well as
+                        the positions and states of all interactable objects in the game. This allows players to pick up where they left off, 
+                        even after closing the game or restarting their device. </p>
+
+                        <p>The main bases of the interaction were built on OpenXR, a virtual reality API that allows developers to create 
+                            immersive experiences for users.</p>
                 </div>
-                <div class="column gap-05">
-                    <h1 class="x-large bold">Features</h1>
+                <div class="column gap-05 w-50">
+                    <h1 class="x-large bold">Art</h1>
                     <p>
-                        The launcher was built with Electron, together with HTML, CSS and JavaScript, to create a simple and functional interface that 
-                    would allow users to easily browse and play the showcased games. The launcher also includes a search bar to help users find 
-                    specific games, as well as a settings menu where users can customize the theme of the launcher.
+                        The art direction for EgoFractum focused on creating a unique visual style that would enhance the a
+                        tmospheric and immersive nature of the game. I worked to establish a dark and gritty aesthetic, using a combination of lighting, 
+                        color, and environmental design to create a sense of tension and unease. The game's environments were designed to be self-contained and immersive.
                     </p>
+                    <p>Lighting and color was used to direct the player in a non intrusive way to make the player feel like they are finding things on their own.</p>
                 </div>
             </div>
             <div class="row space-between">
@@ -104,7 +105,6 @@
                 </div>
             </div>
         </div>
-
     </body>
     <script src="../scripts/carousel.js" defer></script>
 </html>
