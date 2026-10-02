@@ -1,172 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/new.css"></link>
-    <link rel="stylesheet" href="css/aerosoldier.css"></link>
-    <link rel="stylesheet" href="css/general-sans.css"></link>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></link>
-    <script src="scripts/page.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
-
-
-</head>
-<body>
-    <div class="navbar">
-            <ul class="nav-links">
-                <li><a href="https://github.com/gooberW" title="Github">GitHub</a><i class="bi bi-arrow-right"></i></li>
-                <li><a href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin">LinkedIn</a><i class="bi bi-arrow-right"></i></li>
-                <li><a href="https://gabrielrtx.itch.io/" title="Itch.io">itch.io</a><i class="bi bi-arrow-right"></i></li>
-                <li class="button" id="contact-button"><a href="#contact" >Contact</a><i class="bi bi-arrow-right"></i></li>
-                <!--<li><a href="CV_Gabriel.pdf" title="Curriculum Vitae"><i class="bi bi-file-earmark-person"></i></a></li>-->
-            </ul>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="css/style.css"></link>
+        <link rel="stylesheet" href="css/aerosoldier.css"></link>
+        <link rel="stylesheet" href="css/general-sans.css"></link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></link>
+        <script src="scripts/page.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    </head>
+    <body class="pad-in-5">
+        <div class="row items-end gap-1 pad-2">
+            <a class="pill inverted center rotate" href="https://github.com/gooberW" title="Github">
+                GitHub
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a class="pill inverted center rotate" href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin">
+                LinkedIn
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a class="pill inverted center rotate" href="https://gabrielrtx.itch.io/" title="Itch.io">
+                itch.io
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a id="contact-button" class="pill center rotate-down" href="#contact">
+                Contact
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
-
-    <div class="content">
-        <div class="hero">
-            <div class="hero-text">
-                <p>Gabriel</p>
-                <p>Teixeira</p>
-            </div>
-            <div class="">
-                
-            </div>
-        </div>
-
-        <p class="section-title">projects</p>
-        <div class="projects">
-            <div class="row">
-                <a href="projects/igs-launcher.html" class="col igs">
-                    <div class="cover"><img src="img/igs-launcher_banner.png" alt="IGS Launcher"></div>
-                    <div class="text">
-                        <h2 class="project-title">IGS Launcher</h2>
-                        <p>Solo Project</p>
-                        <div class="row tags">
-                            <div class="tag">Electron</div>
-                            <div class="tag">HTML</div>
-                            <div class="tag">CSS</div>
-                            <div class="tag">JavaScript</div>
-                        </div>
-                    </div>
-                </a>
-                <a href="projects/nature-strikes-back.html" class="col nsb">
-                    <div class="cover"><video class="video" muted autoplay loop playsinline poster="img/nsb_banner.png" src="img/nsbGameplay.mp4" alt="Nature Strikes Back"></video></div>
-                    <div class="text">
-                        <div class="row" style="align-items: center; margin-bottom: 0.25em;">
-                            <h2 class="project-title">Nature Strikes Back</h2>
-                            <div class="wip-tag" title="Demo"><p>DEMO</p></div>
-                        </div>
-
-                        <div class="row">
-                            <p>Artist, Programmer</p>
-                            <div class="team-size"><i class="bi bi-person-fill"></i> 6</div>
-                        </div>
-                        <div class="row tags">
-                            <div class="tag">Unity</div>
-                            <div class="tag">Blender</div>
-                        </div>
-
-                    </div>
-                </a>
-                
-            </div>
-            <div class="row">
-                <a href="https://iselgamestudios.com" class="col igs" target="_blank" rel="noopener noreferrer"
-                style="text-decoration: none;">
-                    <div class="cover"><img src="img/igs_banner.png" alt="ISEL Game Studios Website"></div>
-                    <div class="text">
-                        <h2 class="project-title">ISEL Game Studios Website</h2>
-                        <p>Solo Project</p>
-                        <div class="row tags">
-                            <div class="tag">HTML</div>
-                            <div class="tag">CSS</div>
-                            <div class="tag">JavaScript</div>
-                        </div>
-                    </div>
-                </a>
-                <a class="col">
-                    <div class="cover"><video class="video" muted autoplay loop playsinline poster=""><source src="img/egofr_teaser.mp4" alt="Ego Fractum Teaser"></video></div>
-                    <div class="text">
-                        <div class="row" style="align-items: center; margin-bottom: 0.25em;">
-                            <h2 class="project-title">Ego Fractum</h2>
-                            <div class="wip-tag"><p>PROTOTYPE</p></div>
-                        </div>
-                        
-                        
-                        <div class="row" style="align-items: center;">
-                            <p>Artist, Programmer</p>
-                            <div class="team-size"><i class="bi bi-person-fill"></i> 2</div>
-                        </div>
-                        <div class="row tags">
-                            <div class="tag">Unity</div>
-                            <div class="tag">Blender</div>
-                            <div class="tag">VR</div>
-                        </div>
-
-                    </div>
-                </a>
-                <a href="projects/loadout-cms.html" class="col">
-                    <div class="cover"><img src="img/loadout_cms.png" alt="LOADOUT CMS"></div>
-                    <div class="text">
-                        <h2 class="project-title">LOADOUT CMS</h2>
-                        <div class="row">
-                            <p>University Project</p>
-                            <div class="team-size"><i class="bi bi-person-fill"></i> 2</div>
-                        </div>
-                        <div class="row tags">
-                            <div class="tag">PHP</div>
-                            <div class="tag">SQL</div>
-                            <div class="tag">JavaScript</div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-        </div>
-
-        <p class="section-title" style="text-align: start; margin-top: 2em;">contact</p>
-    <section id="contact">
-        
-        <form action="https://formspree.io/f/xgobdqvv" method="POST">
-            <div class="col">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" class="message-body" placeholder="Message" required></textarea>
-            </div>
-            <div class="col" style="width: 30%">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Name" required>
-                
-                <label for="userEmail">Email</label>
-                <input id="userEmail" name="email" type="email" placeholder="Email" required>
-                
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Subject" required>
-                <div class="row contact">
-                    <button class="button sec" type="reset">Clear</input>
-                    <button class="button" type="submit">Send <i class="bi bi-arrow-right"></i></button>
-                    
+        <div class="content">
+            <div class="hero">
+                <div class="hero-text">
+                    <p>Gabriel</p>
+                    <p>Teixeira</p>
                 </div>
-                
+                <div class=""></div>
             </div>
-        </form>
-    </section>
-
-    </div>
-
-    
-
-
-    <footer id="footer" class="footer">
-        <ul class="nav-links">
-            <li><a href="https://github.com/gooberW" title="Github">GitHub</a><i class="bi bi-arrow-right"></i></li>
-            <li><a href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin">LinkedIn</a><i class="bi bi-arrow-right"></i></li>
-            <li><a href="https://gabrielrtx.itch.io/" title="Itch.io">itch.io</a><i class="bi bi-arrow-right"></i></li>
-        </ul>
-    </footer>
-    
-</body>
-
-</html>
+            <p class="x-large mb-1">[projects]</p>
+            <div class="projects mb-2">
+                <div class="row gap-1">
+                    <a href="projects/igs-launcher.html" class="br-1 pad-1 w-50 before igs">
+                        <img class="br-05 mb-1" src="img/igs-launcher_banner.png" alt="IGS Launcher">
+                        <div class="gap-05 column">
+                            <h2 class="project-title">IGS Launcher</h2>
+                            <p class="sec mb-1">Solo Project</p>
+                            <div class="row gap-05">
+                                <div class="pill small">Electron</div>
+                                <div class="pill small">HTML</div>
+                                <div class="pill small">CSS</div>
+                                <div class="pill small">JavaScript</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="projects/nature-strikes-back.html" class="br-1 pad-1 w-50 before nsb">
+                        <video
+                            class="br-05 mb-1"
+                            muted
+                            autoplay
+                            loop
+                            playsinline
+                            poster="img/nsb_banner.png"
+                            src="img/nsbGameplay.mp4"
+                            alt="Nature Strikes Back"
+                        ></video>
+                        <div class="gap-05 column">
+                            <div class="row center gap-05">
+                                <h2 class="project-title">Nature Strikes Back</h2>
+                                <div class="box-dark sec" title="Demo">
+                                    <p>DEMO</p>
+                                </div>
+                            </div>
+                            <div class="row gap-05 sec mb-1">
+                                <p>Artist, Programmer</p>
+                                <div class="team-size">
+                                    <i class="bi bi-person-fill"></i>
+                                    6
+                                </div>
+                            </div>
+                            <div class="row gap-05">
+                                <div class="pill small">Unity</div>
+                                <div class="pill small">C#</div>
+                                <div class="pill small">Blender</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row gap-1">
+                    <a
+                        href="https://iselgamestudios.com"
+                        class="br-1 pad-1 w-50 before website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style="text-decoration: none;"
+                    >
+                        <img class="br-05 mb-1" src="img/igs_banner.png" alt="ISEL Game Studios Website">
+                        <div class="column gap-05">
+                            <h2 class="project-title">ISEL Game Studios Website</h2>
+                            <p class="sec mb-1">Solo Project</p>
+                            <div class="row gap-05">
+                                <div class="pill small">HTML</div>
+                                <div class="pill small">CSS</div>
+                                <div class="pill small">JavaScript</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="projects/ego-fractum.html" class="br-1 pad-1 w-50 before">
+                        <video
+                            class="br-05 mb-1"
+                            muted
+                            autoplay
+                            loop
+                            playsinline
+                            poster=""
+                        >
+                            <source src="img/egofr_teaser.mp4" alt="Ego Fractum Teaser">
+                        </video>
+                        <div class="column gap-1">
+                            <div class="row gap-05 center">
+                                <h2 class="project-title">Ego Fractum</h2>
+                                <div class="box-dark sec" title="Prototype">
+                                    <p>PROTOTYPE</p>
+                                </div>
+                            </div>
+                            <div class="row gap-05 sec mb-1">
+                                <p>Artist, Programmer</p>
+                                <div class="team-size">
+                                    <i class="bi bi-person-fill"></i>
+                                    2
+                                </div>
+                            </div>
+                            <div class="row gap-05">
+                                <div class="pill small">Unity</div>
+                                <div class="pill small">C#</div>
+                                <div class="pill small">Blender</div>
+                                <div class="pill small">VR</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="projects/loadout-cms.html" class="br-1 pad-1 w-50 before">
+                        <img class="br-05 mb-1" src="img/loadout_cms.png" alt="LOADOUT CMS">
+                        <div class="column gap-1">
+                            <h2>LOADOUT CMS</h2>
+                            <div class="row sec gap-05 mb-1">
+                                <p>University Project</p>
+                                <div class="team-size">
+                                    <i class="bi bi-person-fill"></i>
+                                    2
+                                </div>
+                            </div>
+                            <div class="row gap-05">
+                                <div class="pill small">PHP</div>
+                                <div class="pill small">SQL</div>
+                                <div class="pill small">JavaScript</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="x-large mb-1">[contact]</p>
+            <section id="contact" class="mb-2">
+                <form action="https://formspree.io/f/xgobdqvv" method="POST" class="row gap-1 w-100">
+                    <div class="column w-50 gap-05">
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="message-body box-dark pad-07-1 br-05 mb-05"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="column w-50 gap-05">
+                        <label for="name">Name</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Name"
+                            required
+                            class="box-dark pad-07-1 br-05 mb-05"
+                        >
+                        <label for="userEmail">Email</label>
+                        <input
+                            id="userEmail"
+                            name="email"
+                            type="email"
+                            placeholder="Email"
+                            required
+                            class="box-dark pad-07-1 br-05 mb-05"
+                        >
+                        <label for="subject">Subject</label>
+                        <input
+                            id="subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Subject"
+                            required
+                            class="box-dark pad-07-1 br-05 mb-05"
+                        >
+                        <div class="row items-end gap-1">
+                            <button class="pill inverted" type="reset">
+                                Clear
+                            </button>
+                            <button class="pill" type="submit">
+                                Send
+                                <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <footer id="footer" class="footer">
+                <div class="row items-end gap-1 pad-2">
+                    <a class="pill inverted center rotate" href="https://github.com/gooberW" title="Github">
+                        GitHub
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a class="pill inverted center rotate" href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin">
+                        LinkedIn
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a class="pill inverted center rotate" href="https://gabrielrtx.itch.io/" title="Itch.io">
+                        itch.io
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </body>
+    </html>
