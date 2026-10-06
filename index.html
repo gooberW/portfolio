@@ -8,11 +8,29 @@
         <link rel="stylesheet" href="css/aerosoldier.css"></link>
         <link rel="stylesheet" href="css/general-sans.css"></link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></link>
-        <script src="scripts/page.js" defer></script>
         <link rel="icon" type="image/x-icon" href="img/favicon.png">
     </head>
     <body class="pad-in-5">
-        <div class="row items-end gap-1 pad-2">
+        <i class="bi bi-three-dots hamburguer-icon" id="hamburguer-icon"></i>
+        <div class="hamburguer column gap-1" id="hamburguer">
+            <a class="pill inverted center rotate" href="https://github.com/gooberW" title="Github">
+                GitHub
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a class="pill inverted center rotate" href="https://www.linkedin.com/in/gabriel-teixeira-030503359/" title="Linkedin">
+                LinkedIn
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a class="pill inverted center rotate" href="https://gabrielrtx.itch.io/" title="Itch.io">
+                itch.io
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <a id="contact-button" class="pill center rotate-down" href="#contact">
+                Contact
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="nav row items-end gap-1 pad-2">
             <a class="pill inverted center rotate" href="https://github.com/gooberW" title="Github">
                 GitHub
                 <i class="bi bi-arrow-right"></i>
@@ -31,12 +49,27 @@
             </a>
         </div>
         <div class="content">
-            <div class="hero">
-                <div class="hero-text">
+            <div class="hero row gap-1">
+                <div class="hero-text column">
                     <p>Gabriel</p>
                     <p>Teixeira</p>
                 </div>
-                <div class=""></div>
+                <div class="column">
+                    <div class="spin" id="spin">
+                        <div class="spin-frame">
+                            <img src="frames/frame1.png" alt="Frame 1" draggable="false">
+                        </div>
+                        <div class="spin-frame">
+                            <img src="frames/frame2.png" alt="Frame 2" draggable="false">
+                        </div>
+                        <div class="spin-frame">
+                            <img src="frames/frame3.png" alt="Frame 3" draggable="false">
+                        </div>
+                        <div class="spin-frame">
+                            <img src="frames/frame4.png" alt="Frame 4" draggable="false">
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="x-large mb-1">[projects]</p>
             <div class="projects mb-2">
@@ -230,4 +263,6 @@
             </div>
         </footer>
     </body>
+    <script src="scripts/spinner.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
 </html>
