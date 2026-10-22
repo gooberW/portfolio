@@ -382,7 +382,10 @@ input:active, input:focus, textarea:active, textarea:focus {
 
 .weak, weak {
     opacity: 0.5;
-    font-size: small;
+}
+
+.bi {
+    font-size: medium !important;
 }
 
 .btn, .btn-light {
